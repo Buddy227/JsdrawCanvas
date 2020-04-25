@@ -29,15 +29,6 @@
     var lineWidth = 2;
     var lines;
 
-    function handleFiles(files) {
-        // Check for the various File API support.
-        if (window.FileReader) {
-            // FileReader are supported.
-            getAsText(files[0]);
-        } else {
-            alert('FileReader are not supported in this browser.');
-        }
-    }
 
 
     function init() {
@@ -75,7 +66,7 @@
             if(i !== 0)
                 ctx.lineTo(csvData[i][1],csvData[i][0]);
         }
-        ctx.lineTo(csvData[0][1],csvData[0][0]);
+        ctx.lineTo(csvData[0][1],csvData[1][0]);
         ctx.closePath();
         ctx.fillStyle = "yellow";
         ctx.fill();
